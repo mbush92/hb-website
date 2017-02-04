@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
-var logo = 'http://uploads.webflow.com/56f679d988dad33d7badd5da/56f686a6f58de1387bbb841c_Hirebotics%20-%20Robot%20Man%20White.png';
-import DangerButton from '../components/DangerButton'
-import {Button} from 'react-bootstrap'
-import { Link } from 'react-router'
+import {Jumbotron, Grid, Row } from 'react-bootstrap'
+//import { Link } from 'react-router'
 import './App.css'
-import NavBar from '../components/NavBar'
+
 
 class App extends Component {
-  renderDangerButton(){
-    return <DangerButton text="Hi"/>
-  }
   render() {
     return (
-      <div>
-        Welcome to the home page!
-      </div>
+      <Jumbotron className="App-background"  >
+        <Grid className="App-header-grid">
+          <Row className="App-header-row" />
+          <Row className="App-middle-row" opacity=".65%">
+            <img className="App-row-image" opacity="1" role="presentation" src="http://uploads.webflow.com/56f679d988dad33d7badd5da/56f6eebac505ae3308553fef_Hirebotics%20-%20White%20WebSize.png" />
+            <p className="App-middle-row-text">For the first time ever, hire a robot for your factory like you would hire an employee. </p>
+          </Row>
+          <Row className="App-header-row" />
+        </Grid>
+      </Jumbotron>
     );
   }
 }
