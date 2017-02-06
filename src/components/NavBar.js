@@ -21,9 +21,6 @@ class NavBar extends Component {
         <LinkContainer to="/faq">
           <NavItem eventKey={2}>FAQ</NavItem>
         </LinkContainer>
-        <LinkContainer to="/test">
-          <NavItem eventKey={3}>Test</NavItem>
-        </LinkContainer>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

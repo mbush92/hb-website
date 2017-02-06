@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import {PageHeader} from 'react-bootstrap'
 import firebase from 'firebase'
 import ReactFireMixin from 'reactfire'
 import { app } from '../components/firebaseApp'
@@ -40,12 +40,15 @@ class FAQContainer extends Component {
 
   render() {
     return (
-      <div>
-    <FAQ
-      isLoading={this.state.isLoading}
-      faqs={this.state.faqs}
-    />
-    </div>
+      <div >
+        
+        <div className="App-backgroud-short"/>
+        <PageHeader className="App"> Frequently Asked Questions </PageHeader>
+        <FAQ
+          isLoading={this.state.isLoading}
+          faqs={this.state.faqs}
+        />
+      </div>
     );
     
   }

@@ -1,5 +1,6 @@
 import React ,{PropTypes} from 'react'
-import FAQList from './test'
+import FAQList from './FAQList'
+import Spinner from 'react-spinkit'
 
 function puke (data){
     return <pre>{JSON.stringify(data, null, '')} </pre>
@@ -10,7 +11,7 @@ function puke (data){
  function FAQ (props) {
     return  (
     props.isLoading === true
-    ?<div> LOADING </div>
+    ?<Spinner spinnerName="three-bouce"/>
     : <FAQList faqs={props.faqs}/>
     )
   }

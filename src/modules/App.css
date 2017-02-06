@@ -40,6 +40,17 @@
   height:600px
 }
 
+.App-background-short {
+  position: relative;
+  height: 100%;
+  background-image: -webkit-radial-gradient(circle farthest-corner at 62% 70%, transparent, rgba(64, 64, 64, .7) 34%), url("http://uploads.webflow.com/56f679d988dad33d7badd5da/56f6be66204063eb5467ee52_mesh.png"), url("http://uploads.webflow.com/56f679d988dad33d7badd5da/56f736edf58de1387bbbea99_Small%20Hero.jpeg");
+  background-image: radial-gradient(circle farthest-corner at 62% 70%, transparent, rgba(64, 64, 64, .7) 34%), url("http://uploads.webflow.com/56f679d988dad33d7badd5da/56f6be66204063eb5467ee52_mesh.png"), url("http://uploads.webflow.com/56f679d988dad33d7badd5da/56f736edf58de1387bbbea99_Small%20Hero.jpeg");
+  background-position: 0px 0px, 0px 0px, 0px 0px;
+  background-size: auto, 2px, cover;
+  background-repeat: repeat, repeat, no-repeat;
+  height:200px
+}
+
 .App-header-row {
   height:200px;
   text-align: center;
