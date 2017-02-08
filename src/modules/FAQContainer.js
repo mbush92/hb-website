@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {PageHeader} from 'react-bootstrap'
+import {PageHeader, Button} from 'react-bootstrap'
 import firebase from 'firebase'
 import ReactFireMixin from 'reactfire'
 import { app } from '../components/firebaseApp'
@@ -15,13 +15,15 @@ class FAQContainer extends Component {
       faqs: [],
       isLoading: true
     }
+    //this.puke = this.puke.bind(this)
   }
 
   componentWillMount() {
 
     this.setState(
       {
-        isLoading: true
+        isLoading: true,
+        isToggled: false
       }
     )
 
@@ -38,10 +40,17 @@ class FAQContainer extends Component {
     })
   }
 
+  handleClick = (e)=> {
+    e.preventDefault()
+    this.setState(prevState => ({
+      isToggled: !prevState.isToggled
+    }))
+  }
+
   render() {
     return (
       <div >
-        
+        <Button  bsStyle="primary" bsSize="large" onClick={this.handleClick}> {this.state.isToggled ? 'ON' : 'OFF'} </Button>
         <div className="App-backgroud-short"/>
         <PageHeader className="App"> Frequently Asked Questions </PageHeader>
         <FAQ
