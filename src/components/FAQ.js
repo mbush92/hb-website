@@ -3,7 +3,9 @@ import FAQList from './FAQList'
 import Spinner from 'react-spinkit'
 
 function puke (data){
-    return <pre>{JSON.stringify(data, null, '')} </pre>
+    return (
+    <pre>{JSON.stringify(data, null, '')} </pre>
+    )
   }
 
  
